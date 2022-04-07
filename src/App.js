@@ -12,7 +12,7 @@ function App() {
       </header>
       <div className='App-body'>
       <div>
-          <ListComponent />
+          <ListComponent  title={"Teams"}/>
         </div>
         <div>
           <InputComponent type="list"/>

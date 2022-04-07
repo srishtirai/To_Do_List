@@ -4,4 +4,21 @@
     border-radius: 0.2em;
     background-color: rgb(223, 222, 222);
     padding: 0.5px;
+    &-heading{
+        width: 90%;
+        height: 100%;
+        font-weight: 500;
+        padding: 0px 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            background-color: rgb(223, 222, 222);
+            font-size: 20px;
+            font-weight: bold;
+            border-width: 0em;
+        }
+    }
 }

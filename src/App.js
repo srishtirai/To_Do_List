@@ -1,7 +1,7 @@
 import React from 'react';
-import Lists from './pages/Lists'
+import InputComponent from './components/InputComponent/InputComponent'
 import './App.scss';
-
+import ListComponent from './components/ListComponent/ListComponent';
 function App() {
   return (
     <div className="App">
@@ -10,8 +10,13 @@ function App() {
           Dashboard
         </p>
       </header>
+      <div className='App-body'>
       <div>
-        <Lists/>
+          <ListComponent />
+        </div>
+        <div>
+          <InputComponent type="list"/>
+        </div>
       </div>
     </div>
   );

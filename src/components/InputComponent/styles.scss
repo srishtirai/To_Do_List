@@ -1,0 +1,52 @@
+.input-container{
+    &-list, &-card{
+        padding: 5px;
+        margin: 0px 10px;
+        width: 190px;
+        border-radius: 0.2em;
+        background-color: rgb(223, 222, 222);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    &-list{
+        height: 50px;
+        padding: 10px;
+        input{
+            font-size: 15px;
+            border-width: 0em;
+            font-size: 15px;
+        }
+    }
+    &-card{
+        width: 190px;
+        height: 110px;
+        &-input{
+            height: 70px;
+            padding: 5px;
+            border-width: 0.1em;
+            border-radius: 0.2em;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            input{
+                font-size: 14px;
+                border-color: rgb(223, 222, 222);
+            }  
+        }
+    }
+    input{
+        border-radius: 0.2em;
+    }
+    button{
+        background-color: black;
+        color: white;
+        border-radius: 0.2em;
+        border-color: black;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteCard } from "../../redux/action/cardActions";
 import "./styles.scss";
+import { AiOutlineClose } from "react-icons/ai";
 
 const CardComponent = ({ cardInfo, listId }) => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const CardComponent = ({ cardInfo, listId }) => {
     <div className="card-container">
         <div className="title">
             <p>{title}</p>
-            <button onClick={removeCard}>X</button>
+            <button onClick={removeCard}><AiOutlineClose/></button>
         </div>
         <div className="subtitle">
             {desc}

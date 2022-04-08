@@ -1,26 +1,41 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import "./styles.scss";
 import { v4 as uuid } from 'uuid';
 import { addList } from '../../redux/action/listActions';
 import { addCard } from '../../redux/action/cardActions';
 
-let InputComponent = ({type, listId, handleSubmit} ) => {
+const validate = values => {
+  const errors = {}
+  if (!values.title) {
+    errors.title = 'Required'
+  } 
+  if (!values.desc) {
+    errors.desc = 'Required'
+  } 
+  return errors;
+}
+
+let InputComponent = ({type, listId, handleSubmit, form} ) => {
   const dispatch = useDispatch();
   
   const addNewList = value => {
-    const newList = value;
-    newList['id'] = uuid();
-    newList['cards'] = [];
+    const newList = {
+      ...value,
+      id: uuid(),
+      cards: []
+    };
     dispatch(addList(newList));
-  }    
+    dispatch(reset(form));
+  }; 
  
   const addNewCard = value => {
     const newCard = value;
     newCard['id'] = uuid();
     dispatch(addCard(newCard, listId));
-  }
+    dispatch(reset(form));
+  };
 
   return (
     <form 
@@ -34,7 +49,7 @@ let InputComponent = ({type, listId, handleSubmit} ) => {
           <Field
             name="title"
             placeholder="Enter list title..."
-            component="input" 
+            component="input"
             type="text"
           />
           <button type="submit">
@@ -52,7 +67,7 @@ let InputComponent = ({type, listId, handleSubmit} ) => {
             <Field
               name="desc"
               placeholder="Enter the text for this card"
-              component="input" 
+              component="input"
               type="text"
             />
           </div>
@@ -67,7 +82,7 @@ let InputComponent = ({type, listId, handleSubmit} ) => {
 }
 
 InputComponent = reduxForm({
-  form: 'add_list_card'
+  validate
 })(InputComponent);
 
 export default InputComponent;

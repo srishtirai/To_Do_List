@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import InputComponent from './components/InputComponent/InputComponent'
 import './App.scss';
 import ListComponent from './components/ListComponent/ListComponent';
 
 const App = () => {
   const data = useSelector((state) => state.data);
-
+  const form = 'add_new_list'
   useEffect(() => {
     window.localStorage.setItem("dashBoardData", JSON.stringify(data));
   },[data])
@@ -27,7 +27,7 @@ const App = () => {
           }
         </div> 
         <div>
-          <InputComponent type="list"/>
+          <InputComponent type="list" form={form}/>
         </div>
       </div>
     </div>

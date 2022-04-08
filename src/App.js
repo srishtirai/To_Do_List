@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import InputComponent from './components/InputComponent/InputComponent'
 import './App.scss';
 import ListComponent from './components/ListComponent/ListComponent';
-function App() {
+
+const App = () => {
+  const data = useSelector((state) => state.data);
+
+  useEffect(() => {
+    window.localStorage.setItem("dashBoardData", JSON.stringify(data));
+  },[data])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -11,9 +19,13 @@ function App() {
         </p>
       </header>
       <div className='App-body'>
-      <div>
-          <ListComponent  title={"Teams"}/>
-        </div>
+        <div className='App-body-lists'>
+          {
+            data.lists && data.lists.map( (list) => 
+              <ListComponent key={list.id} listInfo={list}/>
+            )
+          }
+        </div> 
         <div>
           <InputComponent type="list"/>
         </div>

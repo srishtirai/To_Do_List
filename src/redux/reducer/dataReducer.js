@@ -5,28 +5,28 @@ const initialState = {
 }
 
 const dataReducer = (state = initialState, action) => {
-  const { type, payload } = action;
+  const { type } = action;
   switch (type) {
     case ADD_LIST:
         return {
-            lists: [...state.lists, payload]
+            lists: [...state.lists, action.newList]
         };
     case DELETE_LIST:
-        const deleteIndex = state.lists.findIndex(x => x.id === payload);
+        const deleteIndex = state.lists.findIndex(x => x.id === action.listId);
         state.lists.splice(deleteIndex, 1);
         return {
             lists: state.lists
         };
     case ADD_CARD:
-        const index = state.lists.findIndex(x => x.id === action.listId);
-        state.lists[index].cards.push(action.newCard);
+        const listIndex = state.lists.findIndex(x => x.id === action.listId);
+        state.lists[listIndex].cards.push(action.newCard);
         return {
             lists: state.lists
         }
     case DELETE_CARD:
         const deleteListIndex = state.lists.findIndex(x => x.id === action.listId);
         const deleteCardIndex = state.lists[deleteListIndex].cards.findIndex(x => x.id === action.cardId);
-        state.lists[deleteListIndex].cards.splice(deleteCardIndex,1);
+        state.lists[deleteListIndex].cards.splice(deleteCardIndex, 1);
         return {
             lists: state.lists
         };

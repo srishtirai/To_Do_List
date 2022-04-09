@@ -1,25 +1,26 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import InputComponent from './components/InputComponent/InputComponent'
-import './App.scss';
-import ListComponent from './components/ListComponent/ListComponent';
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+
+import InputComponent from "./components/inputComponent/InputComponent"
+import ListComponent from "./components/ListComponent/ListComponent";
+import "./App.scss";
 
 const App = () => {
   const data = useSelector((state) => state.data);
-  const form = 'add_new_list'
+  const form = "add_new_list"
   useEffect(() => {
     window.localStorage.setItem("dashBoardData", JSON.stringify(data));
   },[data])
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <header className="app-header">
         <p>
           Dashboard
         </p>
       </header>
-      <div className='App-body'>
-        <div className='App-body-lists'>
+      <div className="app-body">
+        <div className="app-body-lists">
           {
             data.lists && data.lists.map( (list) => 
               <ListComponent key={list.id} listInfo={list}/>

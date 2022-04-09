@@ -3,6 +3,7 @@ import data from "./assets/InitialDashboardData";
 import rootReducer from "./redux/reducer";
 
 const dataStorage = JSON.parse(window.localStorage.getItem("dashBoardData"));
+
 const initialState = () => {
   if (dataStorage && dataStorage.lists.length !== 0) {
     return dataStorage;

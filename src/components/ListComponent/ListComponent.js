@@ -1,15 +1,18 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import "./styles.scss";
 import { AiOutlineClose } from "react-icons/ai";
-import InputComponent from '../InputComponent/InputComponent';
-import CardComponent from "../CardComponent/CardComponent";
-import { deleteList } from '../../redux/action/listActions';
+
+import InputComponent from "../inputComponent/InputComponent";
+import CardComponent from "../cardComponent/CardComponent";
+import { deleteList } from "../../redux/action/listActions";
+import "./ListComponent.scss";
 
 const ListComponent = ({ listInfo }) => {
+
   const dispatch = useDispatch();
   const {title, cards, id} = listInfo;
   const form = `add_card_${id}`;
+
   const removeList = () => {
     dispatch(deleteList(id));
   }

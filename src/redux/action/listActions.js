@@ -2,10 +2,10 @@ import {ADD_LIST, DELETE_LIST} from "../types"
 
 export const addList = newList => ({
     type: ADD_LIST,
-    payload: newList
+    newList
 })
 
-export const deleteList = id => ({
+export const deleteList = listId => ({
     type: DELETE_LIST,
-    payload: id
+    listId
 })

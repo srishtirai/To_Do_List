@@ -17,7 +17,21 @@ const validate = values => {
   return errors;
 }
 
-let InputComponent = ({type, listId, handleSubmit, form} ) => {
+const renderField = ({
+  input,
+  placeholder,
+  type,
+  meta: { touched, error, warning }
+}) => (
+  <div className="input-area">
+      <input {...input} placeholder={placeholder} type={type} />
+      {touched &&
+        (error && <span>{error}</span>) 
+      }
+  </div>
+)
+
+let InputComponent = ({type, listId, handleSubmit, pristine, form} ) => {
   const dispatch = useDispatch();
   
   const addNewList = value => {
@@ -49,7 +63,7 @@ let InputComponent = ({type, listId, handleSubmit, form} ) => {
           <Field
             name="title"
             placeholder="Enter list title..."
-            component="input"
+            component={renderField}
             type="text"
           />
           <button type="submit">
@@ -61,13 +75,13 @@ let InputComponent = ({type, listId, handleSubmit, form} ) => {
             <Field
               name="title"
               placeholder="Enter title"
-              component="input" 
+              component={renderField}
               type="text"
             />
             <Field
               name="desc"
               placeholder="Enter the text for this card"
-              component="input"
+              component={renderField}
               type="text"
             />
           </div>

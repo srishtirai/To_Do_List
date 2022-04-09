@@ -38,8 +38,14 @@
             }  
         }
     }
-    input{
-        border-radius: 0.2em;
+    .input-area{
+        display:flex;
+        flex-direction: column;
+        span{
+            text-align: left;
+            font-size: 10px;
+            color: red;
+        }
     }
     button{
         background-color: black;
@@ -51,9 +57,7 @@
         padding: 3px 5px;
     }
     button:hover{
-        background-color: #fff;
-        border: 1px solid #1E88E5;
-        color: #1E88E5;
-        
+        color: rgb(233, 230, 230);
+        border-color: rgb(115, 114, 114);
     }
 }

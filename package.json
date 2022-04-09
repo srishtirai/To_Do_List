@@ -2,7 +2,7 @@
   "name": "navi_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/srishtirai/Navi.git",
+  "homepage": " https://srishtirai.github.io/Navi/",
   "dependencies": {
     "gh-pages": "^3.2.3",
     "node-sass": "^6.0.1",

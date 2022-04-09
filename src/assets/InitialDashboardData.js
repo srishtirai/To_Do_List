@@ -1,3 +1,11 @@
+// Uncomment the below data to start with an empty list
+
+// const data = {
+//   lists: [
+//   ],
+// };
+
+// Mock data
 const data = {
   lists: [
     {

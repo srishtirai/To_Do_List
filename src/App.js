@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import InputComponent from "./components/inputComponent/InputComponent"
-import ListComponent from "./components/ListComponent/ListComponent";
+import ListComponent from "./components/listComponent/ListComponent";
 import "./App.scss";
 
 const App = () => {

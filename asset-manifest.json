@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/srishtirai/Navi.git/static/css/main.930ef8b7.css",
+    "main.js": "/srishtirai/Navi.git/static/js/main.b056163b.js",
+    "index.html": "/srishtirai/Navi.git/index.html",
+    "main.930ef8b7.css.map": "/srishtirai/Navi.git/static/css/main.930ef8b7.css.map",
+    "main.b056163b.js.map": "/srishtirai/Navi.git/static/js/main.b056163b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.930ef8b7.css",
+    "static/js/main.b056163b.js"
+  ]
+}

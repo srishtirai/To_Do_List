@@ -22,14 +22,14 @@ Find the Demo video in the ./src/assets folder.
 - Open command prompt
 - Go to your directory where your react project
 - Write the following commands:
-    npm i
-    npm start
+    - npm i
+    - npm start
 - The project will run on the http://localhost:3000/
 
 ### By Visual Studio:
 - Open the project in visual studio
 - Open terminal in visual studio
 - Write the following command in the terminal:
-    npm i
-    npm start
+    - npm i
+    - npm start
 - The project will run on the http://localhost:3000/

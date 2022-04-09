@@ -7,7 +7,8 @@ import "./App.scss";
 
 const App = () => {
   const data = useSelector((state) => state.data);
-  const form = "add_new_list"
+  const form = "add_new_list";
+  
   useEffect(() => {
     window.localStorage.setItem("dashBoardData", JSON.stringify(data));
   },[data])

@@ -30,7 +30,7 @@ const renderField = ({
         (error && <span>{error}</span>) 
       }
   </div>
-)
+);
 
 let InputComponent = ({type, listId, handleSubmit, form} ) => {
 

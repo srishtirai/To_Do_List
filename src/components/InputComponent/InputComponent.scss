@@ -1,4 +1,4 @@
-.input-container{
+.input-container {
     &-list, &-card{
         padding: 5px;
         margin: 0px 10px;
@@ -10,19 +10,19 @@
         align-items: flex-start;
         justify-content: space-around;
     }
-    &-list{
+    &-list {
         height: 50px;
         padding: 10px;
-        input{
+        input {
             font-size: 15px;
             border-width: 0em;
             font-size: 15px;
         }
     }
-    &-card{
+    &-card {
         width: 190px;
         height: 110px;
-        &-input{
+        &-input {
             height: 70px;
             padding: 5px;
             border-width: 0.1em;
@@ -32,22 +32,22 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-around;
-            input{
+            input {
                 font-size: 14px;
                 border-color: rgb(223, 222, 222);
             }  
         }
     }
-    .input-area{
+    .input-area {
         display:flex;
         flex-direction: column;
-        span{
+        span {
             text-align: left;
             font-size: 10px;
             color: red;
         }
     }
-    button{
+    button {
         background-color: black;
         color: white;
         border-radius: 0.3em;
@@ -56,7 +56,7 @@
         font-weight: bold;
         padding: 3px 5px;
     }
-    button:hover{
+    button:hover {
         color: rgb(233, 230, 230);
         border-color: rgb(115, 114, 114);
     }

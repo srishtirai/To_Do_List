@@ -5,7 +5,7 @@ import rootReducer from "./redux/reducer";
 const dataStorage = JSON.parse(window.localStorage.getItem("dashBoardData"));
 
 const initialState = () => {
-  if (dataStorage && dataStorage.lists.length !== 0) {
+  if (dataStorage && dataStorage.lists) {
     return dataStorage;
   } else {
     window.localStorage.setItem("dashBoardData", JSON.stringify(data));

@@ -1,5 +1,3 @@
-# Navi
-
 ## Demo
 Find the Demo video in the ./src/assets folder.
 
